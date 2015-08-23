@@ -1,0 +1,31 @@
+{
+  "name": "rdf-store-server",
+  "version": "0.1.0",
+  "description": "RDF Store that uses a local store or a remote store depending on the IRI",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicola/rdf-store-server.git"
+  },
+  "keywords": [
+    "rdf-stores",
+    "rdf",
+    "linked",
+    "data"
+  ],
+  "author": "Nicola Greco <me@nicola.io> (http://nicolagreco.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicola/rdf-store-server/issues"
+  },
+  "homepage": "https://github.com/nicola/rdf-store-server",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "rdf-store-multi": "^0.1.2"
+  }
+}
