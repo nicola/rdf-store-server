@@ -4,9 +4,9 @@ var string = require('string')
 var MultiStore = require('rdf-store-multi')
 
 function ServerStore (options) {
-  var self = this
-
   options = options || {}
+
+  var self = {}
   self.local = options.local
   self.remote = options.remote
 
