@@ -23,14 +23,14 @@ var FileStore = require('rdf-store-fs')
 var ServerStore = require('rdf-store-server')
 var http = require('express')
 
-var store = new ServerStore({
+var store = ServerStore({
   local: new LdpStore(rdf),
   remote: new FileStore(rdf)
 })
 
 var app = express()
 app.get('/*', function(req, res) {
-  var host = req.protocol + req.host
+  var host = req.protocol + '://' + req.host
 
   store(host).graph(host + req.originalUrl, function (graph, err) {
     // This will run on the local store (FileStore)
