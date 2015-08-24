@@ -1,6 +1,6 @@
 {
   "name": "rdf-store-server",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "RDF Store that uses a local store or a remote store depending on the IRI",
   "main": "index.js",
   "scripts": {
