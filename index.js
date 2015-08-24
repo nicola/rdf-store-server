@@ -12,14 +12,14 @@ function ServerStore (options) {
   self.remote = options.remote
   self.host = options.host
 
-  var router = function (method, args) {
+  var router = function (method, args, callback) {
     var iri = args[0]
     var options = args[args.length - 1] || {}
     var host = options.host || self.host || 'http://localhost'
     if (string(iri).startsWith(host)) {
-      return self.local
+      return callback(null, self.local)
     } else {
-      return self.remote
+      return callback(null, self.remote)
     }
   }
 
