@@ -40,7 +40,7 @@ app.get('/*', function(req, res) {
 
   store.graph('http://other.tld/resource.tld', function (graph, err) {
     // This will run on the remote store (LdpStore)
-  }, host: host)
+  }, {host: host})
 })
 
 ```
