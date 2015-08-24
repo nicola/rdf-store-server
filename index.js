@@ -12,16 +12,19 @@ function ServerStore (options) {
   self.remote = options.remote
   self.host = options.host
 
-  self.router = function (method, args) {
+  var router = function (method, args) {
     var iri = args[0]
     var options = args[args.length - 1] || {}
     var host = options.host || self.host || 'http://localhost'
-    if (string(iri).beginsWith(host)) {
+    if (string(iri).startsWith(host)) {
       return self.local
     } else {
       return self.remote
     }
   }
+
+  options.router = router
+  MultiStore.call(this, options)
 }
 inherits(ServerStore, MultiStore)
 
