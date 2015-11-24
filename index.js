@@ -1,4 +1,4 @@
-'use strict'
+module.exports = ServerStore
 
 var string = require('string')
 var MultiStore = require('rdf-store-multi')
@@ -27,5 +27,3 @@ function ServerStore (options) {
   MultiStore.call(this, options)
 }
 inherits(ServerStore, MultiStore)
-
-module.exports = ServerStore
