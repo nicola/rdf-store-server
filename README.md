@@ -1,6 +1,8 @@
 # rdf-store-server
+[![](https://img.shields.io/badge/project-Solid-7C4DFF.svg?style=flat-square)](https://github.com/solid/solid)
 
-RDF Store that uses a local store or a remote store depending on the IRI.
+> RDF Store that uses a local store or a remote store depending on the IRI.
+
 It follows the [RDF-ext Interface](http://bergos.github.io/rdf-ext-spec/) specification.
 
 
